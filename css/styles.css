@@ -197,6 +197,7 @@ header {
 
 .collection-list {
     list-style: none;
+    background-color: rgb(233, 240, 253);
     margin: auto;
     padding: 0;
 }
@@ -209,7 +210,80 @@ header {
     background-color: #fff;
 }
 
-.collection-list-item div {
+.overlay {
+    position: absolute;
+    box-sizing: border-box;
+    width: 256px;
+    height: 282px;
+    border-width: 10px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+}
+
+.overlay-icons {
+    list-style: none;
+    margin: 0;
+    padding: 80px 0 8px 35px;
+    font-size: 0;
+}
+
+.overlay-icons-item button {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    margin-right: 8px;
+}
+
+.overlay-icons-item:nth-last-of-type(1) {
+    margin-right: 0;
+}
+
+.overlay-icons-item:hover {
+    background-color: #1abc9c;
+}
+
+.heart-button {
+    background-image: url("../img/icons/heart.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.arrows-button {
+    background-image: url("../img/icons/arrows.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.clock-button {
+    background-image: url("../img/icons/clock.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cart {
+    display: block;
+    width: 164px;
+    height: 48px;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    margin: auto;
+    
+}
+
+.cart p {
+    font-family: serif;
+}
+
+.item-name,
+.item-price {
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
@@ -217,6 +291,7 @@ header {
     vertical-align: middle;
     color: #ffffff;
     line-height: 40px;
+    height: 40px;
     margin: 0;
     padding: 0;
     bottom: 0;
@@ -225,15 +300,38 @@ header {
 .item-name {
     position: absolute;
     width: 200px;
-    height: 40px;
     background-color: #323232;
     left: 0;
+
+}
+
+.item-name p {
+    margin: 0;
+    padding: 0 0 0 14px;
 }
 
 .item-price {
     position: absolute;
     right: 0;
     width: 56px;
-    height: 40px;
     background-color: #8c8c8c;
 }
+
+.item-price p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.collection-list-item:hover .overlay {
+    opacity: 0.549;
+}
+
+.collection-list-item:hover .item-name {
+    background-color: #1abc9c;
+}
+
+.collection-list-item:hover .item-price {
+    background-color: #7fd9c7;
+}
+
