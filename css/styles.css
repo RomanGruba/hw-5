@@ -192,6 +192,7 @@ header {
     height: 8px;
     margin: auto;
     margin-top: 32px;
+    margin-bottom: 80px;
 
 }
 
@@ -200,14 +201,21 @@ header {
     background-color: rgb(233, 240, 253);
     margin: auto;
     padding: 0;
+    padding-bottom: 100px;
 }
 
 .collection-list-item {
     position: relative;
     display: block;
-    width: 256px;
+    width: 254px;
     height: 322px;
     background-color: #fff;
+    margin-right: 30px;
+    font-size: 0;
+}
+
+.collection-list-item:nth-last-of-type(1) {
+    margin-right: 0;
 }
 
 .overlay {
@@ -355,5 +363,7 @@ header {
     background-color: #7fd9c7;
 }
 
-
+.collection-list-item {
+    float: left;
+}
 
